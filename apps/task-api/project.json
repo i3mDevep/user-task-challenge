@@ -1,0 +1,27 @@
+{
+  "name": "task-api",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/task-api/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "dependsOn": ["build"],
+      "options": {
+        "buildTarget": "task-api:build",
+        "runBuildTargetDependencies": false
+      },
+      "configurations": {
+        "development": {
+          "watch": true,
+          "buildTarget": "task-api:build:development"
+        },
+        "production": {
+          "buildTarget": "task-api:build:production"
+        }
+      }
+    }
+  }
+}

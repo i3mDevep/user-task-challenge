@@ -1,0 +1,10 @@
+{
+  "development": {
+    "username": "root",
+    "password": "123456",
+    "database": "taskappdb",
+    "host": "localhost",
+    "port": 33060,
+    "dialect": "mysql"
+  }
+}
